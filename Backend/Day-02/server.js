@@ -2,6 +2,16 @@ const express = require('express');
 
 const app =  express(); // server instance create karna
 
-app.listen(3000,()=>{
-    console.log('Hello World!')
-})  // server start karna 
+app.get('/',(req,res)=>{
+    res.send("hello world!");
+})
+
+app.get('/about',(req,res)=>{
+    res.send("This is about page.")
+})
+
+app.get('/home',(req,res)=>{
+    res.send('This is home page.')
+})
+
+app.listen(3000)  // server start karna 
